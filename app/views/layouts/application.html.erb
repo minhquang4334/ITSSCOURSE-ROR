@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <h3>Hello, <%=  current_user.email %> </h3>
 
+<%= link_to "logout" , destroy_user_session_path, method: :delete%>
 <%= yield %>
 
 </body>
